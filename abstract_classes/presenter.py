@@ -5,9 +5,6 @@ class Presenter:
         self.app = app
 
     def start(self, view):
-        self.set_view(view)
-
-    def set_view(self, view):
         self.view = view
         self.view.set_presenter(self)
         view.start()

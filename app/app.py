@@ -29,6 +29,6 @@ class App:
         window_presenter = instance_class_from_module_and_name(f'presenters.{window_name}_presenter',
                                                                window_class_name + 'Presenter',
                                                                model=window_model, app=self)
-        window_presenter.set_view(window_view)
+        window_presenter.start(window_view)
         self.current_window = window_name
         window_view.main()
